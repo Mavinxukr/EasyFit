@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  @include styleWithPrefix(box-sizing, border-box);
+  box-sizing: border-box;
+  font-size: $fontSizeContent;
+  font-family: "InterMedium", sans-serif;
+  color: $colorContent;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+#__next {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: $colorContent;
+}
+
+a:hover,
+button:hover {
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+button:focus,
+input:focus {
+  outline: none;
+}
+
+h1 {
+  @include styleForText(36px, $fontMain);
+}
+
+h2 {
+  @include styleForText(34px, $fontMain);
+}
+
+h3 {
+  @include styleForText(30px, $fontMain);
+}
+
+h4 {
+  @include styleForText(24px, $fontMain);
+}
+
+h5 {
+  @include styleForText(18px, $fontMain);
+}
+
+h6 {
+  @include styleForText($fontSizeContent, $fontMain);
+}
+
+textarea {
+  resize: none;
+}
