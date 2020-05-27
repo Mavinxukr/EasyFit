@@ -4,14 +4,16 @@ import PropTypes from 'prop-types';
 import styles from './Input.scss';
 
 const Input = ({
-   type,
-   value,
-   onChange,
-   classNameWrapper,
-   viewType,
-   onBlur,
-   id,
-   name
+  formikProps: {
+    type,
+    value,
+    onChange,
+    classNameWrapper,
+    viewType,
+    onBlur,
+    id,
+    name,
+  },
 }) => {
   const [status, setStatus] = useState('noActive');
 
@@ -27,22 +29,27 @@ const Input = ({
     <input
       type={type}
       value={value}
-      onFocus={() =>
-      setStatus('active')}
+      onFocus={() => setStatus('active')}
       onChange={onChange}
       onBlur={onBlur}
       className={classNameForInput}
       id={id}
       name={name}
     />
-  )
+  );
 };
 
 Input.propTypes = {
-  type: PropTypes.string,
-  value: PropTypes.string,
-  viewType: PropTypes.string,
-  classNameWrapper: PropTypes.string,
+  formikProps: PropTypes.shape({
+    type: PropTypes.string,
+    value: PropTypes.string,
+    viewType: PropTypes.string,
+    classNameWrapper: PropTypes.string,
+    onChange: PropTypes.func,
+    onBlur: PropTypes.func,
+    id: PropTypes.string,
+    name: PropTypes.string,
+  }),
 };
 
 export default Input;

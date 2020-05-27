@@ -87,7 +87,28 @@
   },
   "babel": {
     "presets": [
-      "react-app"
+      "react-app",
+      [
+        "@babel/preset-env",
+        {
+          "useBuiltIns": "entry",
+          "shippedProposals": true,
+          "spec": true,
+          "debug": false
+        }
+      ]
+    ],
+    "plugins": [
+      "inline-react-svg",
+      [
+        "@babel/plugin-proposal-decorators",
+        {
+          "legacy": true
+        }
+      ],
+      "@babel/plugin-proposal-class-properties",
+      "@babel/plugin-proposal-function-bind",
+      "@babel/plugin-proposal-object-rest-spread"
     ]
   },
   "devDependencies": {
