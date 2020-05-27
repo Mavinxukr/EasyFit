@@ -1,0 +1,22 @@
+@import "scss/core/mixins";
+@import "scss/core/vars";
+
+.loginPopup {
+  padding: 52px 70px 50px;
+}
+
+.loginTitle {
+  margin-bottom: 40px;
+}
+
+.input {
+  border: 1px solid rgba(0,	0, 0, 0.1);
+  border-radius: 5px;
+  padding: 16px 20px 15px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.loginSubmit {
+  margin-top: 20px;
+}

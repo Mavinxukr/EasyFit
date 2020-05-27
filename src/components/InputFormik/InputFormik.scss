@@ -1,0 +1,9 @@
+@import "scss/core/mixins";
+@import "scss/core/vars";
+
+.label {
+  width: 100%;
+  color: $colorContent;
+  display: block;
+  margin-bottom: 10px;
+}
