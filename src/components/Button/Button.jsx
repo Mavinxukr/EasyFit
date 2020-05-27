@@ -3,7 +3,16 @@ import cx from 'classnames';
 import PropTypes from 'prop-types';
 import styles from './Button.scss';
 
-const Button = ({ children, classNameWrapper, onClick, href, type, viewType, disabled, active }) => {
+const Button = ({
+  children,
+  classNameWrapper,
+  onClick,
+  href,
+  type,
+  viewType,
+  disabled,
+  active,
+}) => {
   const TagName = href ? 'a' : 'button';
 
   const classNameForButton = cx(cx(styles.button, classNameWrapper), {
@@ -20,7 +29,7 @@ const Button = ({ children, classNameWrapper, onClick, href, type, viewType, dis
     >
       {children}
     </TagName>
-  )
+  );
 };
 
 Button.propTypes = {
