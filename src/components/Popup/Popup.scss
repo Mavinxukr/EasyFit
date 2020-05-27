@@ -1,17 +1,6 @@
 @import "scss/core/mixins";
 @import "scss/core/vars";
 
-.Popup {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: $colorWhite;
-  z-index: 100;
-  border-radius: 10px;
-  overflow: auto;
-}
-
 .backgroundPopup {
   background: $colorContent;
   opacity: .2;
@@ -23,8 +12,13 @@
   z-index: 50;
 }
 
-.closePopup {
+.popup {
   position: absolute;
-  top: 30px;
-  right: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: $colorWhite;
+  z-index: 100;
+  border-radius: 10px;
+  overflow: auto;
 }

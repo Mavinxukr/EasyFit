@@ -6,7 +6,7 @@ import styles from './Popup.scss';
 const Popup = ({ children, classNameWrapper }) => (
   <>
     <div className={styles.backgroundPopup} />
-    <div className={cx(styles.Popup, classNameWrapper)}>
+    <div className={cx(styles.popup, classNameWrapper)}>
       {children}
     </div>
   </>
@@ -15,7 +15,6 @@ const Popup = ({ children, classNameWrapper }) => (
 Popup.propTypes = {
   children: PropTypes.node,
   classNameWrapper: PropTypes.string,
-  showCloseBtn: PropTypes.bool,
 };
 
 export default Popup;
