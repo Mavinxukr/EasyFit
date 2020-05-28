@@ -27,7 +27,7 @@ const Login = () => (
               ...formik,
               name: 'email',
               label: 'Ваш e-mail',
-              classNameWrapper: styles.input,
+              viewType: 'entry',
             }}
           />
           <InputFormik
@@ -35,7 +35,7 @@ const Login = () => (
               ...formik,
               name: 'password',
               label: 'Пароль',
-              classNameWrapper: styles.input,
+              viewType: 'entry',
             }}
           />
           <Button

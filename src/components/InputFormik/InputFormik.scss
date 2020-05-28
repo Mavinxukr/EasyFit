@@ -1,6 +1,10 @@
 @import "scss/core/mixins";
 @import "scss/core/vars";
 
+.wrapper {
+  width: 100%;
+}
+
 .errorText {
   @include styleForText(14px, $fontAdditional, $colorRedDark);
 
