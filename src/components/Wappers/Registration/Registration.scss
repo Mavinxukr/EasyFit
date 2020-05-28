@@ -1,0 +1,73 @@
+@import "scss/core/mixins";
+@import "scss/core/vars";
+
+.popupWrapper {
+  padding: 50px 109px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text {
+  margin-top: 6px;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+
+  & span {
+    display: block;
+    width: 195px;
+  }
+}
+
+.facebookButton {
+  width: 100%;
+
+  @include styleForText($fontSizeContent, $fontMain, $colorBlue);
+
+  &::before {
+    content: url("/svg/fb-blue.svg");
+    padding-top: 2px;
+    padding-right: 8px;
+  }
+}
+
+.facebookButton,
+.googleButton {
+  background-color: white;
+  padding: 11px 0 10px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  border: 1px solid $colorBlue;
+  border-radius: 5px;
+}
+
+.googleButton {
+  width: 195px;
+  margin-left: 8px;
+
+  @include styleForText($fontSizeContent, $fontMain, $colorRed);
+
+  &::before {
+    content: url("/svg/google-plus.svg");
+    padding-top: 1px;
+    height: 8px;
+    padding-right: 8px;
+  }
+}
+
+.inputWrapper {
+  width: 100%;
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 0.2px solid $colorContent;
+}
+

@@ -1,0 +1,8 @@
+@import "scss/core/mixins";
+@import "scss/core/vars";
+
+.errorText {
+  @include styleForText(14px, $fontAdditional, $colorRedDark);
+
+  margin-top: 11px;
+}

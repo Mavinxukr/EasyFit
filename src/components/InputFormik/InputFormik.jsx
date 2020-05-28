@@ -4,23 +4,29 @@ import PropTypes from 'prop-types';
 import Input from '../Input/Input';
 import styles from './InputFormik.scss';
 
-const InputFormik = ({ formikProps, classNameWrapper }) => {
-  console.log(formikProps);
-
-  return (
-    <div className={cx(styles.wrapper, classNameWrapper)}>
-      <Input formikProps={formikProps} />
-      {formikProps.touched && formikProps.errors && (
-        <div>{formikProps.errors}</div>
-      )}
-    </div>
-  );
-};
+const InputFormik = ({ formikProps, classNameWrapper }) => (
+  <div className={cx(styles.wrapper, classNameWrapper)}>
+    {formikProps.label && (
+      <label
+        htmlFor={formikProps.name}
+        className={styles.label}
+      >
+        {formikProps.label}
+      </label>
+    )}
+    <Input formikProps={formikProps} />
+    {formikProps.touched[formikProps.name] && formikProps.errors[formikProps.name] && (
+      <p className={styles.errorText}>{formikProps.errors[formikProps.name]}</p>
+    )}
+  </div>
+);
 
 InputFormik.propTypes = {
   formikProps: PropTypes.shape({
-    touched: PropTypes.string,
-    errors: PropTypes.string,
+    touched: PropTypes.object,
+    errors: PropTypes.object,
+    label: PropTypes.string,
+    name: PropTypes.string,
   }),
   classNameWrapper: PropTypes.string,
 };

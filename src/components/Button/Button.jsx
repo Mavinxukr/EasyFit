@@ -11,18 +11,18 @@ const Button = ({
   type,
   viewType,
   disabled,
-  active,
 }) => {
   const TagName = href ? 'a' : 'button';
 
   const classNameForButton = cx(cx(styles.button, classNameWrapper), {
-    [styles.buttonFormDisabled]: viewType === 'formButton' && disabled,
-    [styles.buttonFormActive]: viewType === 'formButton' && active,
+    [styles.buttonForm]: viewType === 'formButton',
+    [styles.buttonFormActive]: viewType === 'formButton' && !disabled,
   });
 
   return (
     <TagName
       disabled={disabled}
+      href={href}
       type={type}
       onClick={onClick}
       className={classNameForButton}
@@ -40,7 +40,6 @@ Button.propTypes = {
   type: PropTypes.string,
   viewType: PropTypes.oneOf(['formButton']),
   disabled: PropTypes.bool,
-  active: PropTypes.bool,
 };
 
 export default Button;

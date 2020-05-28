@@ -1,0 +1,13 @@
+@import "scss/core/mixins";
+@import "scss/core/vars";
+
+.buttonForm {
+  @include styleForText($fontSizeContent, $fontMain, $colorButtons);
+
+  border: 1px solid $colorButtons;
+}
+
+.buttonFormActive {
+  background: $colorButtons;
+  color: $colorWhite;
+}
