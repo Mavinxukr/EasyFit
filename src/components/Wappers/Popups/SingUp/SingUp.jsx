@@ -1,14 +1,18 @@
 import React from 'react';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-import InputFormik from '../../InputFormik/InputFormik';
-import Popup from '../../Popup/Popup';
-import Button from '../../Button/Button';
-import styles from './Login.scss';
+import InputFormik from '../../../InputFormik/InputFormik';
+import Popup from '../../../Popup/Popup';
+import Button from '../../../Button/Button';
+import IconArowBack from '../../../../../public/svg/BackArrow.svg';
+import styles from './SingUp.scss';
 
-const Login = () => (
-  <Popup classNameWrapper={styles.loginPopup}>
-    <h2 className={styles.loginTitle}>С возвращением</h2>
+const SingUp = () => (
+  <Popup classNameWrapper={styles.singUpPopup}>
+    <Button classNameWrapper={styles.bntBack} type="button">
+      <IconArowBack />
+    </Button>
+    <h2 className={styles.singUpTitle}>Заполните поля</h2>
     <Formik
       initialValues={{ email: '', password: '' }}
       validationSchema={Yup.object({
@@ -21,8 +25,9 @@ const Login = () => (
       onSubmit={(values) => console.log(values)}
     >
       {(formik) => (
-        <form className={styles.loginForm} onSubmit={formik.handleSubmit}>
+        <form className={styles.singUpForm} onSubmit={formik.handleSubmit}>
           <InputFormik
+            classNameWrapper={styles.formikWrapper}
             formikProps={{
               ...formik,
               name: 'email',
@@ -32,16 +37,29 @@ const Login = () => (
             }}
           />
           <InputFormik
+            classNameWrapper={styles.formikWrapper}
+            formikProps={{
+              ...formik,
+              name: 'name',
+              label: 'Имя и Фамилия',
+              viewType: 'entry',
+              placeholder: 'Ethan Pierce',
+              classNameWrapper: styles.inputWrapper,
+            }}
+          />
+          <InputFormik
+            classNameWrapper={styles.formikWrapper}
             formikProps={{
               ...formik,
               name: 'password',
-              label: 'Пароль',
+              label: 'Создайте пароль',
               viewType: 'entry',
+              placeholder: '*****',
               classNameWrapper: styles.inputWrapper,
             }}
           />
           <Button
-            classNameWrapper={styles.loginSubmit}
+            classNameWrapper={styles.singUpSubmit}
             viewType="formButton"
             type="submit"
             disabled={!formik.dirty || !formik.isValid}
@@ -54,4 +72,4 @@ const Login = () => (
   </Popup>
 );
 
-export default Login;
+export default SingUp;

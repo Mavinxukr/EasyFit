@@ -23,8 +23,8 @@ const InputFormik = ({ formikProps, classNameWrapper }) => (
 
 InputFormik.propTypes = {
   formikProps: PropTypes.shape({
-    touched: PropTypes.string,
-    errors: PropTypes.string,
+    touched: PropTypes.object,
+    errors: PropTypes.object,
     label: PropTypes.string,
     name: PropTypes.string,
   }),
