@@ -4,13 +4,13 @@ import * as Yup from 'yup';
 import InputFormik from '../../../InputFormik/InputFormik';
 import Popup from '../../../Popup/Popup';
 import Button from '../../../Button/Button';
-import IconArowBack from '../../../../../public/svg/BackArrow.svg';
+import IconArrowBack from '../../../../../public/svg/BackArrow.svg';
 import styles from './Login.scss';
 
 const Login = () => (
   <Popup classNameWrapper={styles.loginPopup}>
     <Button classNameWrapper={styles.bntBack} type="button">
-      <IconArowBack />
+      <IconArrowBack />
     </Button>
     <h2 className={styles.loginTitle}>С возвращением</h2>
     <Formik

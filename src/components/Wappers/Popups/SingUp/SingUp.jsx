@@ -4,13 +4,13 @@ import * as Yup from 'yup';
 import InputFormik from '../../../InputFormik/InputFormik';
 import Popup from '../../../Popup/Popup';
 import Button from '../../../Button/Button';
-import IconArowBack from '../../../../../public/svg/BackArrow.svg';
+import IconArrowBack from '../../../../../public/svg/BackArrow.svg';
 import styles from './SingUp.scss';
 
 const SingUp = () => (
   <Popup classNameWrapper={styles.singUpPopup}>
     <Button classNameWrapper={styles.bntBack} type="button">
-      <IconArowBack />
+      <IconArrowBack />
     </Button>
     <h2 className={styles.singUpTitle}>Заполните поля</h2>
     <Formik
