@@ -21,13 +21,14 @@ const Login = () => (
       onSubmit={(values) => console.log(values)}
     >
       {(formik) => (
-        <form onSubmit={formik.handleSubmit}>
+        <form className={styles.loginForm} onSubmit={formik.handleSubmit}>
           <InputFormik
             formikProps={{
               ...formik,
               name: 'email',
               label: 'Ваш e-mail',
               viewType: 'entry',
+              classNameWrapper: styles.inputWrapper,
             }}
           />
           <InputFormik
@@ -36,6 +37,7 @@ const Login = () => (
               name: 'password',
               label: 'Пароль',
               viewType: 'entry',
+              classNameWrapper: styles.inputWrapper,
             }}
           />
           <Button

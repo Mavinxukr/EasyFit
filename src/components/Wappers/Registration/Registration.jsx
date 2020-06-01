@@ -62,6 +62,7 @@ const Registration = () => (
             viewType="formButton"
             disabled={!formik.dirty || !formik.isValid}
             type="submit"
+            classNameWrapper={styles.buttonWrapper}
           >
             Продолжить
           </Button>

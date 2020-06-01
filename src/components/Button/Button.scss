@@ -5,6 +5,9 @@
   @include styleForText($fontSizeContent, $fontMain, $colorButtons);
 
   border: 1px solid $colorButtons;
+  border-radius: 8px;
+  width: 100%;
+  padding: 17px 0 16px;
 }
 
 .buttonFormActive {

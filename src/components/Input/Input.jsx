@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
-import OkIcon from '../../../public/svg/Path325.svg';
+import OkIcon from '../../../public/svg/Path324.svg';
 import styles from './Input.scss';
 
 const Input = ({
@@ -32,7 +32,10 @@ const Input = ({
       {viewType === 'entry'
       && (status === 'noActive' || !(touched[name] && errors[name]))
       && (
-        <OkIcon className={styles.icon} />
+        <OkIcon className={cx(styles.icon, {
+          [styles.correctIcon]: !(touched[name] && errors[name]) && status === 'active',
+        })}
+        />
       )}
       {viewType === 'entry' && (touched[name] && errors[name]) && (
         <span className={styles.errorLine} />
