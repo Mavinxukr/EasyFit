@@ -1,5 +1,6 @@
 import React from 'react';
-import SingUp from '../Popups/SingUp/SingUp';
+import Header from '../../Header/Header';
+// import SingUp from '../Popups/SingUp/SingUp';
 // import Login from '../Popups/Login/Login';
 // import Registration from '../Popups/Registration/Registration';
 // import ResetPassword from '../Popups/ResetPassword/ResetPassword';
@@ -8,7 +9,7 @@ import SingUp from '../Popups/SingUp/SingUp';
 function App() {
   return (
     <div>
-      <SingUp />
+      <Header />
     </div>
   );
 }
