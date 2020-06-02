@@ -14,11 +14,13 @@ const SingUp = () => (
     </Button>
     <h2 className={styles.singUpTitle}>Заполните поля</h2>
     <Formik
-      initialValues={{ email: '', password: '' }}
+      initialValues={{ email: '', name: '', password: '' }}
       validationSchema={Yup.object({
         email: Yup.string()
           .email('e-mail не валиден')
           .required('Вы не ввели e-mail'),
+        name: Yup.string()
+          .required('Вы не ввели пароль'),
         password: Yup.string()
           .required('Вы не ввели пароль'),
       })}
@@ -62,7 +64,7 @@ const SingUp = () => (
             classNameWrapper={styles.singUpSubmit}
             viewType="formButton"
             type="submit"
-            disabled={!formik.dirty || !formik.isValid}
+            disabled={formik.dirty && formik.isValid}
           >
             Войти в аккаунт
           </Button>
