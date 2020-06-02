@@ -102,7 +102,7 @@
     ],
     "rules": {
       "no-underscore-dangle": ["error", { "allow": ["__REDUX_DEVTOOLS_EXTENSION_COMPOSE__"] }],
-      "enforceInMethodNames": false
+      "enforceInMethodNames": 2
     }
   },
   {

@@ -1,0 +1,39 @@
+Supported Android versions: 5.0 – 8.0. 
+all browsers
+
+гайд с фидел, можно завернуть, будет всегда в углу на всех страницах, если не провел первый live, тогда не можешь закрыть, даже если
+прошел все степы
+
+если нажал на календарях крест, оно свернулось до закрытого, если не влазит, исчезает градиентом(не видно)
+
+Log in / sign up  - 3ч
+Log in - email - 2ч
+Sign up - email - 1,5ч
+Log in - reset - 1,5ч
+Sign up - Facebook / Google - 4ч
+Get started (guides) - step 1 - 8
+Get started (guides) - step 2 - 8
+Get started (guides) - step 3 - 8
+Notification - email - 1ч
+Notification - email/password - 1ч
+Guides - open - 10ч
+Guides – closed - 10ч
+Guides - popup - 12ч
+Feedback - form - 4ч
+Feedback form - 1-2 thanks - 1ч
+Feedback form - 3-4 thanks - 1ч
+Feedback form - 5 thanks - 1ч
+Widget - calendar - 6ч
+States widget - calendar (today / tomorrow) - 14ч
+Finance – Main - 14ч
+Finance - Withdraw - 2ч
+Finance - Withdraw - Complete - 1,5ч
+Pay for next month - 3ч
+Payment to 1-3 monthly - increase - 4ч
+Payment to 1-3 monthly – to cut - 1ч
+lead pricing: 20ч - непонятно с сеткой
+Pricing: more 100 participants - 2ч - как это меняеться форма
+Pricing — Company: selected 30+ - 1ч
+Send form - studio-gym - 2ч
+
+

@@ -11,12 +11,13 @@ const Button = ({
   type,
   viewType,
   disabled,
+  active,
 }) => {
   const TagName = href ? 'a' : 'button';
 
   const classNameForButton = cx(cx(styles.button, classNameWrapper), {
     [styles.buttonForm]: viewType === 'formButton',
-    [styles.buttonFormActive]: viewType === 'formButton' && !disabled,
+    [styles.buttonFormActive]: viewType === 'formButton' && active,
   });
 
   return (
@@ -40,6 +41,7 @@ Button.propTypes = {
   type: PropTypes.string,
   viewType: PropTypes.oneOf(['formButton']),
   disabled: PropTypes.bool,
+  active: PropTypes.bool,
 };
 
 export default Button;
