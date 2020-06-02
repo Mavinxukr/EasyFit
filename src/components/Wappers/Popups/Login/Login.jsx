@@ -1,13 +1,17 @@
 import React from 'react';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-import InputFormik from '../../InputFormik/InputFormik';
-import Popup from '../../Popup/Popup';
-import Button from '../../Button/Button';
+import InputFormik from '../../../InputFormik/InputFormik';
+import Popup from '../../../Popup/Popup';
+import Button from '../../../Button/Button';
+import IconArrowBack from '../../../../../public/svg/BackArrow.svg';
 import styles from './Login.scss';
 
 const Login = () => (
   <Popup classNameWrapper={styles.loginPopup}>
+    <Button classNameWrapper={styles.bntBack} type="button">
+      <IconArrowBack />
+    </Button>
     <h2 className={styles.loginTitle}>С возвращением</h2>
     <Formik
       initialValues={{ email: '', password: '' }}
@@ -23,6 +27,7 @@ const Login = () => (
       {(formik) => (
         <form className={styles.loginForm} onSubmit={formik.handleSubmit}>
           <InputFormik
+            classNameWrapper={styles.formikWrapper}
             formikProps={{
               ...formik,
               name: 'email',
@@ -32,14 +37,21 @@ const Login = () => (
             }}
           />
           <InputFormik
+            classNameWrapper={styles.formikWrapper}
             formikProps={{
               ...formik,
               name: 'password',
               label: 'Пароль',
+              placeholder: '*****',
               viewType: 'entry',
               classNameWrapper: styles.inputWrapper,
             }}
           />
+          <p className={styles.forgotPassword}>
+            <a className={styles.forgotLink} href="/">
+              Забыли пароль?
+            </a>
+          </p>
           <Button
             classNameWrapper={styles.loginSubmit}
             viewType="formButton"

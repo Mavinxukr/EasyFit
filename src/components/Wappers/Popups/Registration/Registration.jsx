@@ -3,9 +3,9 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 import FacebookLogin from 'react-facebook-login';
 import GoogleLogin from 'react-google-login';
-import InputFormik from '../../InputFormik/InputFormik';
-import Popup from '../../Popup/Popup';
-import Button from '../../Button/Button';
+import InputFormik from '../../../InputFormik/InputFormik';
+import Popup from '../../../Popup/Popup';
+import Button from '../../../Button/Button';
 import styles from './Registration.scss';
 
 const Registration = () => (
