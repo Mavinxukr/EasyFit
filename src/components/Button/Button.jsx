@@ -18,6 +18,7 @@ const Button = ({
   const classNameForButton = cx(cx(styles.button, classNameWrapper), {
     [styles.buttonForm]: viewType === 'formButton',
     [styles.buttonFormActive]: viewType === 'formButton' && active,
+    [styles.buttonBlack]: viewType === 'black',
   });
 
   return (
@@ -39,7 +40,7 @@ Button.propTypes = {
   onClick: PropTypes.func,
   href: PropTypes.string,
   type: PropTypes.string,
-  viewType: PropTypes.oneOf(['formButton']),
+  viewType: PropTypes.oneOf(['formButton', 'black']),
   disabled: PropTypes.bool,
   active: PropTypes.bool,
 };

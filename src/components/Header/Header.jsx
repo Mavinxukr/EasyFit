@@ -24,7 +24,7 @@ const Header = () => (
       <Button classNameWrapper={styles.btn} type="button">Подписка</Button>
       <Button classNameWrapper={styles.btn} type="button">Отправить отзыв</Button>
       <p className={styles.horizontalLine} />
-      <Button classNameWrapper={styles.darkBtn}>
+      <Button viewType="black" classNameWrapper={styles.darkBtn}>
         <IconVideo className={styles.icon} />
         Групповой live
       </Button>

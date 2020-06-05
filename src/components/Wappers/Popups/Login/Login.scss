@@ -18,6 +18,8 @@
 
 .inputWrapper {
   width: 398px;
+  background: $colorWhite;
+  border: 1px solid $colorGreyDark;
 }
 
 .loginSubmit {
@@ -42,3 +44,4 @@
   top: 36px;
   left: 30px;
 }
+

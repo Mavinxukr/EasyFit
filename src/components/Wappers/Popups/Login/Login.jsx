@@ -32,6 +32,7 @@ const Login = () => (
               ...formik,
               name: 'email',
               label: 'Ваш e-mail',
+              type: 'text',
               viewType: 'entry',
               classNameWrapper: styles.inputWrapper,
             }}
@@ -42,6 +43,7 @@ const Login = () => (
               ...formik,
               name: 'password',
               label: 'Пароль',
+              type: 'password',
               placeholder: '*****',
               viewType: 'entry',
               classNameWrapper: styles.inputWrapper,
