@@ -19,6 +19,7 @@ const Button = ({
     [styles.buttonForm]: viewType === 'formButton',
     [styles.buttonFormActive]: viewType === 'formButton' && active,
     [styles.buttonBlack]: viewType === 'black',
+    [styles.buttonGrey]: viewType === 'grey',
   });
 
   return (
@@ -40,7 +41,7 @@ Button.propTypes = {
   onClick: PropTypes.func,
   href: PropTypes.string,
   type: PropTypes.string,
-  viewType: PropTypes.oneOf(['formButton', 'black']),
+  viewType: PropTypes.oneOf(['formButton', 'black', 'grey']),
   disabled: PropTypes.bool,
   active: PropTypes.bool,
 };
