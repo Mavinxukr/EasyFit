@@ -62,11 +62,14 @@
 
 .fullWidth {
   width: 100%;
-  text-align:  center;
+  text-align: left;
 
   &:first-child {
-    text-align: left;
     min-width: 320px;
+  }
+
+  &:last-child {
+    text-align: right;
   }
 }
 

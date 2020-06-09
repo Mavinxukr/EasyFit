@@ -6,13 +6,13 @@ import styles from './App.scss';
 
 function App() {
   return (
-    <div>
+    <>
       <Header />
       <main className={styles.flex}>
         <Sidebar />
         <Lead />
       </main>
-    </div>
+    </>
   );
 }
 
