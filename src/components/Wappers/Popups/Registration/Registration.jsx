@@ -2,7 +2,7 @@ import React from 'react';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import PropTypes from 'prop-types';
-import FacebookLogin from 'react-facebook-login';
+import { FacebookLogin } from 'react-facebook-login-component';
 import GoogleLogin from 'react-google-login';
 import InputFormik from '../../../InputFormik/InputFormik';
 import Popup from '../../../Popup/Popup';
@@ -15,8 +15,7 @@ const Registration = ({ submit, setStatus }) => (
       initialValues={{ email: '' }}
       validationSchema={Yup.object({
         email: Yup.string()
-          .email('e-mail не валиден')
-          .required('Вы не ввели e-mail'),
+          .email('e-mail не валиден'),
       })}
       onSubmit={(values) => {
         submit(values);
@@ -29,11 +28,14 @@ const Registration = ({ submit, setStatus }) => (
           <p className={styles.text}>Войдите или Создайте аккаунт</p>
           <div className={styles.buttons}>
             <FacebookLogin
-              appId="490339138347349"
-              autoLoad={false}
-              callback={(response) => console.log(response)}
-              cssClass={styles.facebookButton}
-              textButton="Facebook"
+              socialId="1083453692003561"
+              language="en_US"
+              scope="public_profile,email"
+              responseHandler={() => setStatus('registerViaFacebook')}
+              fields="id,email,name"
+              version="v2.5"
+              className={styles.facebookButton}
+              buttonText="Facebook"
             />
             <GoogleLogin
               clientId="892807808817-0v44irg3g2b16vdbt4m7usn5g3uprhmj.apps.googleusercontent.com"
@@ -48,7 +50,9 @@ const Registration = ({ submit, setStatus }) => (
                 </button>
               )}
               buttonText="Login"
-              onSuccess={(response) => console.log(response)}
+              onSuccess={() => {
+                setStatus('registerViaGoogle');
+              }}
               onFailure={(response) => console.log(response)}
               cookiePolicy="single_host_origin"
             />

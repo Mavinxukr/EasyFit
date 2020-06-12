@@ -10,7 +10,7 @@ import styles from './SingUp.scss';
 import Registration from '../Registration/Registration';
 import { api } from '../../../../service/api';
 
-const SingUp = ({ setStatus, email }) => (
+const SingUp = ({ setStatus, email, status }) => (
   <Popup classNameWrapper={styles.singUpPopup}>
     <Button
       classNameWrapper={styles.bntBack}
@@ -20,6 +20,17 @@ const SingUp = ({ setStatus, email }) => (
       <IconArrowBack />
     </Button>
     <h2 className={styles.singUpTitle}>Заполните поля</h2>
+    {status === 'registerViaFacebook' && (
+      <div className={styles.facebookBLock}>
+        <p className={styles.facebookTitle}>Facebook</p>
+        <p className={styles.username}>@ethpierce</p>
+      </div>
+    ) || status === 'registerViaGoogle' && (
+      <div className={styles.googleBLock}>
+        <p className={styles.googleTitle}>Google</p>
+        <p className={styles.username}>@ethpierce</p>
+      </div>
+    )}
     <Formik
       initialValues={{ email: email || '', name: '', password: '' }}
       validationSchema={Yup.object({
@@ -57,24 +68,26 @@ const SingUp = ({ setStatus, email }) => (
               classNameWrapper: styles.inputWrapper,
             }}
           />
-          <InputFormik
-            classNameWrapper={styles.formikWrapper}
-            formikProps={{
-              ...formik,
-              name: 'password',
-              label: 'Создайте пароль',
-              viewType: 'entry',
-              placeholder: '*****',
-              classNameWrapper: styles.inputWrapper,
-            }}
-          />
+          {(status !== 'registerViaFacebook' && status !== 'registerViaGoogle') && (
+            <InputFormik
+              classNameWrapper={styles.formikWrapper}
+              formikProps={{
+                ...formik,
+                name: 'password',
+                label: 'Создайте пароль',
+                viewType: 'entry',
+                placeholder: '*****',
+                classNameWrapper: styles.inputWrapper,
+              }}
+            />
+          )}
           <Button
             classNameWrapper={styles.singUpSubmit}
             viewType="formButton"
             type="submit"
-            disabled={!formik.dirty && !formik.isValid}
+            active={formik.dirty && formik.isValid}
           >
-            Войти в аккаунт
+            Создать аккаунт
           </Button>
         </form>
       )}
@@ -85,6 +98,7 @@ const SingUp = ({ setStatus, email }) => (
 Registration.propTypes = {
   setStatus: PropTypes.func,
   email: PropTypes.string,
+  status: PropTypes.string,
 };
 
 export default SingUp;

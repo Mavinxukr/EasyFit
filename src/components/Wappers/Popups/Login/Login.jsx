@@ -59,7 +59,7 @@ const Login = () => (
             classNameWrapper={styles.loginSubmit}
             viewType="formButton"
             type="submit"
-            disabled={!formik.dirty && !formik.isValid}
+            active={formik.dirty && formik.isValid}
           >
             Войти в аккаунт
           </Button>

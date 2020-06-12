@@ -33,7 +33,7 @@ const Input = ({
       && (status === 'noActive' || !(touched[name] && errors[name]))
       && (
         <OkIcon className={cx(styles.icon, {
-          [styles.correctIcon]: !(touched[name] && errors[name]) && status === 'active',
+          [styles.correctIcon]: !(touched[name] && errors[name]) && values[name].length > 0,
         })}
         />
       )}
@@ -44,7 +44,9 @@ const Input = ({
         type={type}
         value={values[name]}
         onFocus={() => setStatus('active')}
-        onChange={(e) => handleChange(e)}
+        onChange={(e) => {
+          handleChange(e);
+        }}
         onBlur={handleBlur}
         className={classNameForInput}
         id={id}

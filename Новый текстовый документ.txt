@@ -1,39 +1,70 @@
-Supported Android versions: 5.0 – 8.0. 
-all browsers
-
-гайд с фидел, можно завернуть, будет всегда в углу на всех страницах, если не провел первый live, тогда не можешь закрыть, даже если
-прошел все степы
-
-если нажал на календарях крест, оно свернулось до закрытого, если не влазит, исчезает градиентом(не видно)
-
 Log in / sign up  - 3ч
 Log in - email - 2ч
 Sign up - email - 1,5ч
 Log in - reset - 1,5ч
 Sign up - Facebook / Google - 4ч
-Get started (guides) - step 1 - 8
-Get started (guides) - step 2 - 8
-Get started (guides) - step 3 - 8
+Get started (guides) - step 1 - 6,5ч
+Get started (guides) - step 2 - 6.5ч
+Get started (guides) - step 3 - 6,5ч
 Notification - email - 1ч
 Notification - email/password - 1ч
-Guides - open - 10ч
-Guides – closed - 10ч
-Guides - popup - 12ч
+Guides - open - 8ч
+Guides – closed - 1ч
+Guides - popup - 6ч
 Feedback - form - 4ч
 Feedback form - 1-2 thanks - 1ч
-Feedback form - 3-4 thanks - 1ч
-Feedback form - 5 thanks - 1ч
+Feedback form - 3-4 thanks - 0,5ч
+Feedback form - 5 thanks - 0,5ч
 Widget - calendar - 6ч
 States widget - calendar (today / tomorrow) - 14ч
-Finance – Main - 14ч
+- state 1 - 1ч
+Finance – Main
+-навигация - 2ч
+-Header - 2ч
+-Доходы - 1ч
+-Выводы - 1ч
+Методы вывода - 3ч
+Мои подписки - 3ч
 Finance - Withdraw - 2ч
 Finance - Withdraw - Complete - 1,5ч
 Pay for next month - 3ч
 Payment to 1-3 monthly - increase - 4ч
 Payment to 1-3 monthly – to cut - 1ч
-lead pricing: 20ч - непонятно с сеткой
-Pricing: more 100 participants - 2ч - как это меняеться форма
-Pricing — Company: selected 30+ - 1ч
+lead pricing
+-first section - 4ч
+-cards - 6ч
+-opportunities - 8ч
+Pricing: more 100 participants - 2,5ч
+Pricing — Company: selected 30+ - 2ч
 Send form - studio-gym - 2ч
+Send form - company - 3ч
+Send form - more plan - 1,5ч
+Pricing: with Active plan - 10ч ? нет в новой версии дизайна
+Profile — personal info - 10ч ? нет в новой версии дизайна
+Profile — Email, password - 6ч
+Profile — personal info – without photo - 1ч
+Group live - lead - 8ч
+Group live - 6ч
+Group Live: states form - 8ч
+Group Live: states
+Каждая форма по 0,6ч
+Group Live — more 15 pop-up - 1ч
+Group live - Active pop-up - 6ч
+Group live - participants - 2ч
+Group live: witting&create - 12ч ? нет в новой версии дизайна
+Group live: witting - 3ч
+Group live: witting - error - 2,5ч
+Group live — training - 7ч
+Group live — training — two - 4ч
+Group live — training — three - 0,5ч
+Group live — training — four - 0,5ч
+Group training — answer - 3ч
+Group training — quote - 1,5ч
+Group training — create answer - 1,5ч
+Group training — party - 6ч
+Pup-up - finish - 0,5ч
+Group live: finish - 2ч
+States - error - 0,5ч
+
 
 

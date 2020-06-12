@@ -10,6 +10,51 @@
   text-align: center;
 }
 
+.facebookBLock,
+.googleBLock {
+  margin-top: -30px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.facebookTitle {
+  @include styleForText($fontSizeContent, $fontMain, $colorBlue);
+
+  &:before {
+    content: url("/svg/fb-blue.svg");
+    left: -7px;
+    top: 1px;
+  }
+}
+
+.googleTitle {
+  @include styleForText($fontSizeContent, $fontMain, $colorRed);
+
+  &::before {
+    content: url("/svg/google-plus.svg");
+    left: -12px;
+    top: 1px;
+  }
+}
+
+.facebookTitle,
+.googleTitle {
+  position: relative;
+  padding-left: 8px;
+
+  &:before {
+    position: absolute;
+  }
+}
+
+.username {
+  @include styleForText($fontSizeContent, $fontAdditional);
+
+  opacity: .5;
+  margin-left: 15px;
+}
+
 .singUpForm {
   display: flex;
   flex-direction: column;

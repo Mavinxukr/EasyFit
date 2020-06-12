@@ -2,9 +2,9 @@
 @import "scss/core/vars";
 
 .buttonForm {
-  @include styleForText($fontSizeContent, $fontMain, $colorButtons);
+  @include styleForText($fontSizeContent, $fontMain, #9a9a9a);
 
-  border: 1px solid $colorButtons;
+  background-color: $colorAvatarBackground;
   border-radius: 8px;
   width: 100%;
   padding: 17px 0 16px;
