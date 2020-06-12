@@ -1,17 +1,22 @@
-import React from 'react';
-import Header from '../../Header/Header';
-import Sidebar from '../../Sidebar/Sidebar';
-import Lead from '../../Lead/Lead';
-import styles from './App.scss';
+import React, { useState } from 'react';
+import Registration from '../Popups/Registration/Registration';
+import SingUp from '../Popups/SingUp/SingUp';
+// import Login from '../Popups/Login/Login';
+// import styles from './App.scss';
 
 function App() {
+  const [status, setStatus] = useState('entry');
+  const [submit, setSubmit] = useState(null);
+
   return (
     <>
-      <Header />
-      <main className={styles.flex}>
-        <Sidebar />
-        <Lead />
-      </main>
+      {
+        status === 'entry' && (
+          <Registration submit={setSubmit} setStatus={setStatus} />
+        ) || status === 'registration' && (
+          <SingUp email={submit.email} setStatus={setStatus} />
+        )
+      }
     </>
   );
 }

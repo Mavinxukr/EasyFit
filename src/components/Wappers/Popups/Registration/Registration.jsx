@@ -1,6 +1,7 @@
 import React from 'react';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
+import PropTypes from 'prop-types';
 import FacebookLogin from 'react-facebook-login';
 import GoogleLogin from 'react-google-login';
 import InputFormik from '../../../InputFormik/InputFormik';
@@ -8,7 +9,7 @@ import Popup from '../../../Popup/Popup';
 import Button from '../../../Button/Button';
 import styles from './Registration.scss';
 
-const Registration = () => (
+const Registration = ({ submit, setStatus }) => (
   <Popup classNameWrapper={styles.popupWrapper}>
     <Formik
       initialValues={{ email: '' }}
@@ -17,7 +18,10 @@ const Registration = () => (
           .email('e-mail не валиден')
           .required('Вы не ввели e-mail'),
       })}
-      onSubmit={(values) => console.log(values)}
+      onSubmit={(values) => {
+        submit(values);
+        setStatus('registration');
+      }}
     >
       {(formik) => (
         <form className={styles.form} onSubmit={formik.handleSubmit}>
@@ -71,5 +75,10 @@ const Registration = () => (
     </Formik>
   </Popup>
 );
+
+Registration.propTypes = {
+  setStatus: PropTypes.func,
+  submit: PropTypes.string,
+};
 
 export default Registration;
