@@ -6,6 +6,7 @@ import Popup from '../../../Popup/Popup';
 import Button from '../../../Button/Button';
 import IconArrowBack from '../../../../../public/svg/BackArrow.svg';
 import styles from './Login.scss';
+import { api } from '../../../../service/api';
 
 const Login = () => (
   <Popup classNameWrapper={styles.loginPopup}>
@@ -22,7 +23,7 @@ const Login = () => (
         password: Yup.string()
           .required('Вы не ввели пароль'),
       })}
-      onSubmit={(values) => console.log(values)}
+      onSubmit={(values) => api.login('login', values)}
     >
       {(formik) => (
         <form className={styles.loginForm} onSubmit={formik.handleSubmit}>
@@ -58,7 +59,7 @@ const Login = () => (
             classNameWrapper={styles.loginSubmit}
             viewType="formButton"
             type="submit"
-            disabled={formik.dirty && formik.isValid}
+            disabled={!formik.dirty && !formik.isValid}
           >
             Войти в аккаунт
           </Button>

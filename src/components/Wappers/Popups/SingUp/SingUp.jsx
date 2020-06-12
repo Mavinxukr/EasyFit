@@ -72,7 +72,7 @@ const SingUp = ({ setStatus, email }) => (
             classNameWrapper={styles.singUpSubmit}
             viewType="formButton"
             type="submit"
-            // disabled={formik.dirty || formik.isValid}
+            disabled={!formik.dirty && !formik.isValid}
           >
             Войти в аккаунт
           </Button>
